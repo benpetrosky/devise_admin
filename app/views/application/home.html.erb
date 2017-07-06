@@ -1,0 +1,19 @@
+<h1>This is the home page</h1>
+
+<% if current_user %>
+
+<ul>
+  <li><%= current_user.first_name %></li>
+  <li><%= current_user.last_name %></li>
+  <li><%= current_user.encrypted_password %></li>
+  <li><%= current_user.created_at %></li>
+  <li><%= current_user.current_sign_in_at %></li>
+
+</ul>
+
+
+<% end %>
+
+<% if current_user && current_user.admin %>
+  <h2>you ARE an ADMIN!!!</h2>
+<% end %>
